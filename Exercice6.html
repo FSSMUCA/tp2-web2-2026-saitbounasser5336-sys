@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+    let nom = null
+    let age = 0
+    let ville = ""
+    let score = undefined
+    let actif = false
+
+    let t = {nom,age,ville,score,actif}
+
+    for(let k in t){
+    console.log(k,"?? valeur par défaut ->", t[k] ?? "valeur par défaut");
+    }
+
+    console.log("---");
+
+    for(let k in t){
+    console.log(k,"|| valeur par défaut ->", t[k] || "valeur par défaut");
+    }
+
+    console.log("---");
+
+    for(let k in t){
+
+    let a = t[k] ?? "valeur par défaut"
+    let b = t[k] || "valeur par défaut"
+
+    if(a===b){
+    console.log(k,": ?? et || -> même résultat")
+    }else{
+    console.log(k,": ?? et || -> résultat différent")
+    }
+
+    }
+    </script>
+</body>
+</html>

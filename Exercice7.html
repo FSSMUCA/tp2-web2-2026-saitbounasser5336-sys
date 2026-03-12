@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let nomproduit = "Clavier mécanique"
+        let prix = 89.99
+        let quantite = 3
+        let codepromo = null
+        let reductionpourcentage = 10
+        let estmembre = true
+        let soldecompte = 250
+
+        let soustotal = prix * quantite
+        console.log("sous-total:",soustotal)
+
+        let reduction = 0
+
+        if(codepromo!==null && estmembre){
+        reduction = soustotal * reductionpourcentage / 100
+        }
+
+        console.log("reduction:",reduction)
+
+        let total = soustotal - reduction
+        console.log("total:",total)
+
+        if(soldecompte>=total){
+        console.log("paiement accepté")
+        soldecompte = soldecompte - total
+        }else{
+        console.log("solde insuffisant")
+        }
+
+        console.log("===== recapitulatif =====")
+        console.log("produit :",nomproduit)
+        console.log("quantite :",quantite)
+        console.log("prix :",prix)
+        console.log("sous-total :",soustotal)
+        console.log("reduction :",reduction)
+        console.log("total :",total)
+        console.log("solde :",soldecompte)
+    </script>
+</body>
+</html>
