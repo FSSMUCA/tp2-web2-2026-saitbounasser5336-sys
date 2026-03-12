@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let nom = "   Fatima   "
+        let age = "23"
+        let email = "fatima@example"
+        let scorejeu = "150pts"
+        let estadmin = "false"
+        let derniereconnexion = null
+        let nombreconnexions = "0"
+
+        let nomcorrige = nom.trim()
+
+        let agenum = parseInt(age)
+
+        let emailvalide = email.includes("@") && email.split("@")[1].includes(".")
+
+        let score = parseInt(scorejeu)
+
+        let admin = (estadmin==="true")
+
+        let connexion = derniereconnexion ?? "Jamais connecté"
+
+        let nb = Number(nombreconnexions)
+
+        console.log("===== rapport utilisateur =====")
+        console.log("nom :",nomcorrige)
+        console.log("age :",agenum)
+        console.log("email valide :",emailvalide)
+        console.log("score :",score)
+        console.log("est admin :",admin)
+        console.log("derniere connexion :",connexion)
+
+        if(nb===0){
+        console.log("nombre connexions : Aucune connexion")
+        }else{
+        console.log("nombre connexions :",nb)
+        }
+    </script>
+</body>
+</html>

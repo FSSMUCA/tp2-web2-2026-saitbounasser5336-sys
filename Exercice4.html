@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+    let pairs = [
+    [0,""],
+    [0,"0"],
+    [0,false],
+    ["",false],
+    [null,undefined],
+    [null,false],
+    [NaN,NaN],
+    [1,"1"],
+    [" \t\n ",0]
+    ]
+
+    let diff = 0
+
+    for(let i=0;i<pairs.length;i++){
+        let a = pairs[i][0]
+        let b = pairs[i][1]
+
+        let eq = a==b
+        let seq = a===b
+
+        if(eq && !seq) diff++
+
+        console.log(String(a)+" == "+String(b)+" -> "+eq+" | "+String(a)+" === "+String(b)+" -> "+seq)
+    }
+
+    console.log("---")
+    console.log(diff+" paire(s) où == et === donnent des résultats différents")
+    </script>
+</body>
+</html>
